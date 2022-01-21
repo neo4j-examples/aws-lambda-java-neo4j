@@ -1,0 +1,24 @@
+= AWS Lambda in Java with Neo4j
+
+This project is based on the https://github.com/awsdocs/aws-lambda-developer-guide/tree/main/sample-apps/java-basic[AWS Lambda Java example application^] and Neo4j's AuraDB console Java code example.
+
+Technologies used:
+
+* Java programming language
+* AWS Lambda functions
+* Neo4j graph database
+
+== Application
+
+The application connects to Neo4j, runs a query, and returns the results. It takes an input parameter for the Cypher query from a JSON file and outputs the query results from the database to another JSON file. In the process, the code steps package and push the .jar file to S3, deploy the project to AWS Lambda, execute the function code, and create logs in CloudWatch.
+
+== How-to
+
+The details for creating and using this code project are detailed in an upcoming blog post.
+
+== Resources
+
+* Github project: https://github.com/JMHReif/aws-lambda-java-neo4j[Java AWS Lambda with Neo4j^]
+* AWS Lambda example app: https://github.com/awsdocs/aws-lambda-developer-guide/tree/main/sample-apps/java-basic[Java-basic^]
+* AWS Lambda docs: https://docs.aws.amazon.com/lambda/latest/dg/lambda-java.html[Working with Java^]
+* Free cloud Neo4j database: https://console.neo4j.io/[AuraDB^]

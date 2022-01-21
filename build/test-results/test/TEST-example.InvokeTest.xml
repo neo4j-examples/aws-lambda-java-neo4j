@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="example.InvokeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-20T17:45:42" hostname="elf-lord.local" time="0.071">
+  <properties/>
+  <testcase name="invokeTest()" classname="example.InvokeTest" time="0.071"/>
+  <system-out><![CDATA[2022-01-20 11:45:42 [Test worker] INFO  example.InvokeTest:22 - Invoke TEST
+2022-01-20 11:45:42 [Test worker] INFO  example.TestLogger:9 - ENVIRONMENT VARIABLES: {
+  "PATH": "/Users/jenniferreif/.sdkman/candidates/maven/current/bin:/Users/jenniferreif/.sdkman/candidates/java/current/bin:/Users/jenniferreif/.sdkman/candidates/gradle/current/bin:/Users/jenniferreif/.nvm/versions/node/v15.8.0/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/usr/local/share/npm/bin",
+  "SDKMAN_VERSION": "5.13.1",
+  "JAVA_HOME": "/Users/jenniferreif/.sdkman/candidates/java/current",
+  "TERM": "xterm-256color",
+  "LANG": "en_US.UTF-8",
+  "GRADLE_HOME": "/Users/jenniferreif/.sdkman/candidates/gradle/current",
+  "JAVA_MAIN_CLASS_78933": "worker.org.gradle.process.internal.worker.GradleWorkerMain",
+  "MAVEN_OPTS": "-Xmx2G",
+  "MAVEN_HOME": "/Users/jenniferreif/.sdkman/candidates/maven/current",
+  "NVM_INC": "/Users/jenniferreif/.nvm/versions/node/v15.8.0/include/node",
+  "SDKMAN_DIR": "/Users/jenniferreif/.sdkman",
+  "LOGNAME": "jenniferreif",
+  "XPC_SERVICE_NAME": "0",
+  "PWD": "/Users/jenniferreif/Projects/aws-lambda-developer-guide/sample-apps/java-basic",
+  "TERM_PROGRAM_VERSION": "443",
+  "SDKMAN_CANDIDATES_DIR": "/Users/jenniferreif/.sdkman/candidates",
+  "__CFBundleIdentifier": "com.apple.Terminal",
+  "NVM_CD_FLAGS": "-q",
+  "NVM_DIR": "/Users/jenniferreif/.nvm",
+  "SHELL": "/usr/local/bin/zsh",
+  "TERM_PROGRAM": "Apple_Terminal",
+  "SDKMAN_CANDIDATES_API": "https://api.sdkman.io/2",
+  "SDKMAN_PLATFORM": "darwinx64",
+  "USER": "jenniferreif",
+  "TMPDIR": "/var/folders/zp/kmvk95gd3m767vk74h4jzl8w0000gn/T/",
+  "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.wlFVcpy9AW/Listeners",
+  "XPC_FLAGS": "0x0",
+  "TERM_SESSION_ID": "9C3B4D55-F98D-43A7-9756-22787D5CEF9B",
+  "__CF_USER_TEXT_ENCODING": "0x1F5:0x0:0x0",
+  "NVM_BIN": "/Users/jenniferreif/.nvm/versions/node/v15.8.0/bin",
+  "SHLVL": "2",
+  "HOME": "/Users/jenniferreif",
+  "JAVA_MAIN_CLASS_78921": "org.gradle.launcher.GradleMain"
+}
+2022-01-20 11:45:42 [Test worker] INFO  example.TestLogger:9 - CONTEXT: {}
+2022-01-20 11:45:42 [Test worker] INFO  example.TestLogger:9 - EVENT: {}
+2022-01-20 11:45:42 [Test worker] INFO  example.TestLogger:9 - EVENT TYPE: class java.util.HashMap
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
