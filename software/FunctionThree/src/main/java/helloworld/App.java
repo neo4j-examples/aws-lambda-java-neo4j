@@ -23,14 +23,18 @@ import static software.amazon.lambda.powertools.tracing.CaptureMode.DISABLED;
  */
 public class App implements RequestHandler<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
     Gson gson = new GsonBuilder().setPrettyPrinting().create();
-    String uri = "<Uri for Neo4j Aura database>";
-    String user = "neo4j";
-    String password = "<Password for Neo4j Aura database>";
-    private final Driver driver = GraphDatabase.driver(uri, AuthTokens.basic(user, password), Config.defaultConfig());
 
     @Tracing(captureMode = DISABLED)
     @Metrics(captureColdStart = true)
     public APIGatewayProxyResponseEvent handleRequest(final APIGatewayProxyRequestEvent input, final Context context) {
+        String uri = System.getenv("NEO4J_URI");
+        String user = System.getenv("NEO4J_USER");
+        String password = System.getenv("NEO4J_PASSWORD");
+        System.out.println("uri = " + uri);
+        System.out.println("user = " + user);
+        System.out.println("password = " + password);
+        Driver driver = GraphDatabase.driver(uri, AuthTokens.basic(user, password), Config.defaultConfig());
+
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "application/json");
         headers.put("X-Custom-Header", "application/json");
@@ -38,10 +42,15 @@ public class App implements RequestHandler<APIGatewayProxyRequestEvent, APIGatew
         APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent()
                 .withHeaders(headers);
 
+        System.out.println(gson.toJson(input));
+        String version = null;
+        if (input.getQueryStringParameters().get("version") != null) {
+            version = input.getQueryStringParameters().get("version");
+        }
+
         String readQuery = "MATCH (j:JavaVersion)\n" +
                 "WHERE j.version = $version\n" +
                 "RETURN j.version AS version, j.status AS status, j.gaDate AS ga, j.eolDate AS eol;";
-        String version = "17";
         Map<String, Object> params = Collections.singletonMap("version", version);
 
         try {
