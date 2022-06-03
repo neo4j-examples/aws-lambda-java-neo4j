@@ -14,7 +14,9 @@ The application connects to Neo4j, runs a query, and returns the results. It tak
 
 == How-to
 
-The details for creating and using this code project are detailed in an upcoming blog post.
+The details for creating and using this code project are detailed in a blog post.
+
+* https://medium.com/neo4j/toolbelt-trifecta-connecting-to-neo4j-with-java-and-aws-lambda-3c0fda6d5c1c[Blog post: Connecting to Neo4j with Java and AWS Lambda^]
 
 == Resources
 
