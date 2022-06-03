@@ -1,0 +1,28 @@
+= AWS Lambda in Java with Neo4j
+
+This project is based on the https://github.com/aws-samples/cdk-lambda-packaging-java[AWS Lambda Java application^]and Neo4j's AuraDB console Java code example.
+
+Technologies used:
+
+* Java programming language
+* AWS Lambda functions (with AWS CDK)
+* Neo4j graph database
+
+== Application
+
+The application connects to Neo4j, runs a query, and returns the results. It takes an input parameter for the Cypher query from a URL query parameter and outputs the query results from the database to the console. In the process, the code includes an infrastructure folder that has instructions for packaging and pushing the .jar files to AWS, deploying the project to AWS Lambda, and creating logs in CloudWatch.
+
+== How-to
+
+The details for creating and using this code project will be detailed in an upcoming blog post and presentation.
+
+== Previous iterations
+
+AWS CDK is a relatively newer (and improved method) for packaging and deploying Lambdas. For sample code of building this prior to the CDK with build scripts, please check out the https://github.com/JMHReif/aws-lambda-java-neo4j/tree/v1[v1 branch^] of this repository.
+
+== Resources
+
+* Github project: https://github.com/JMHReif/aws-lambda-java-neo4j[Java AWS Lambda with Neo4j^]
+* AWS Lambda example app: https://github.com/aws-samples/cdk-lambda-packaging-java[Java Lambda with AWS CDK^]
+* AWS Lambda docs: https://docs.aws.amazon.com/cdk/v2/guide/work-with-cdk-java.html[Working with Java and CDK^]
+* Free cloud Neo4j database: https://bit.ly/neo4j-aura[AuraDB^]
