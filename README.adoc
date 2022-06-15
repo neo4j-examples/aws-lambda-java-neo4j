@@ -20,6 +20,12 @@ The details for creating and using this code project will be detailed in an upco
 
 AWS CDK is a relatively newer (and improved method) for packaging and deploying Lambdas. For sample code of building this prior to the CDK with build scripts, please check out the https://github.com/JMHReif/aws-lambda-java-neo4j/tree/v1[v1 branch^] of this repository.
 
+== Presentation
+
+PDF versions of accompanying presentations are published to SpeakerDeck.
+
+* https://speakerdeck.com/jmhreif/toolbelt-trifecta-connecting-to-neo4j-with-java-and-aws-lambda[GraphConnect 2022^]
+
 == Resources
 
 * Github project: https://github.com/JMHReif/aws-lambda-java-neo4j[Java AWS Lambda with Neo4j^]
